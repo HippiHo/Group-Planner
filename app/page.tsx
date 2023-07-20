@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Container from "../components/Container";
 import Day from "../components/Day";
-import { calendar } from "../constants/constants.monthes";
 import { weekDays } from "../constants/constants.weekDays";
+import {getCalendarData} from "../utils/getCalendarData"
+import { TrashIcon } from '@heroicons/react/24/solid'
 
 export default function Home() {
 
@@ -15,15 +16,17 @@ export default function Home() {
       setFilteredWeekdays(filteredWeekdays => [...filteredWeekdays, weekday])
   }
 
+  const data = getCalendarData()
+
   return (
     <main className="flex flex-col items-center mt-0 pt-4">
       <h1>Summer Group planning</h1>
       <p className="mb-5">Dismiss the days that are not free.</p>
-      <Container className="items-center space-x-4">
-        <span className="text-white mr-4">Dismiss each: </span>
+      <Container className="items-center md:space-x-4 flex-col md:flex-row">
+      <TrashIcon className="h-6 w-6 text-white text-center mb-2 md:mb-0" />
         {weekDays.map( item => <button key={item} onClick={() => filterCalendar(item)} className="text-reddish flex font-semibold hover:text-nude">{item}</button>)}
       </Container>
-      {calendar.map(month => (<Container as="section" className="flex-col items-center" key={month.title}>
+      {data.map(month => (<Container as="section" className="flex-col items-center mt-5" key={month.title}>
         <h2 className="text-left">{month.title}</h2>
         <div className="grid grid-cols-3 md:grid-cols-7">
           {month.days.map((day) => (
