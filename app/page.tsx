@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Container from "../components/Container";
 import Day from "../components/Day";
-import { weekDays } from "../constants/constants.weekDays";
+import { weekDays } from "../constants/constants.dateNames";
 import {getCalendarData} from "../utils/getCalendarData"
 import { TrashIcon } from '@heroicons/react/24/solid'
 

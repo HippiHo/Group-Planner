@@ -1,3 +1,5 @@
+import {monthNames} from '../constants/constants.dateNames'
+
 type Day = {
   day: string;
   number: number;
@@ -10,21 +12,6 @@ type Month = {
 };
 
 type Calendar = Month[];
-
-const monthNames = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
 
 const getDayName = (dateStr: string, locale: string) => {
   var date = new Date(dateStr);
