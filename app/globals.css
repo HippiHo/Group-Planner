@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
- @apply bg-emerald
+ @apply bg-primary
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-  @apply text-xl font-bold pb-3 text-nude
+  @apply text-xl font-bold pb-3 text-secondary
 }
 
 h3 {

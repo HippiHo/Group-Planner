@@ -10,10 +10,10 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       'white': '#ffffff',
-      'mint': '#C1ECE4',
-      'reddish': '#FF9EAA',
-      'nude': '#FFD0D0',
-      'emerald': '#3AA6B9',
+      'primary': '#1D5B79',
+      'reddish': '#EF6262',
+      'secondary': '#F3AA60',
+      'highlight': '#4FC0D0',
     },
     extend: {
       gridTemplateColumns: {

@@ -19,8 +19,8 @@ const Day = ({ day, number, weekend, className, isFiltered}: Props) => {
         "w-full p-2 flex flex-col border-2 hover:text-reddish",
         className,
         (dismiss || isFiltered) && "invisible",
-        !weekend && "bg-white border-mint",
-        weekend && "bg-mint border-white"
+        !weekend && "bg-white border-highlight",
+        weekend && "bg-highlight border-white"
       )}
       onClick={() => setDismiss(true)}
     >

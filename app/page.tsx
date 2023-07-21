@@ -24,7 +24,7 @@ export default function Home() {
       <p className="mb-5">Dismiss the days that are not free.</p>
       <Container className="items-center md:space-x-4 flex-col md:flex-row">
       <TrashIcon className="h-6 w-6 text-white text-center mb-2 md:mb-0" />
-        {weekDays.map( item => <button key={item} onClick={() => filterCalendar(item)} className="text-reddish flex font-semibold hover:text-nude">{item}</button>)}
+        {weekDays.map( item => <button key={item} onClick={() => filterCalendar(item)} className="text-reddish flex font-semibold hover:text-secondary">{item}</button>)}
       </Container>
       {data.map(month => (<Container as="section" className="flex-col items-center mt-5" key={month.title}>
         <h2 className="text-left">{month.title}</h2>
