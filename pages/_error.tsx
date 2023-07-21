@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Container from '../components/Container'
 
 import '../app/globals.css'
 import { Inter } from 'next/font/google'
